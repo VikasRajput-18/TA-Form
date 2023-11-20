@@ -3,7 +3,7 @@ import FormWrapper from "./FormWrapper";
 import { FormContext } from "@/context/FromContext";
 
 const StatementOfPurpose = () => {
-  const { sop_1, sop_2, sop_3 , handleChange } = useContext(FormContext);
+  const { sop_1, sop_2, sop_3, handleChange } = useContext(FormContext);
 
   return (
     <FormWrapper
@@ -21,6 +21,7 @@ const StatementOfPurpose = () => {
           placeholder="Enter a description for the long answer"
           className="border border-[#8A8A8A]/40 px-4 py-1 placeholder:text-[#C3C3C3] text-base text-[#595959] h-[68px] outline-none rounded-md"
           onChange={handleChange}
+          maxLength={300}
           name="sop_1"
           value={sop_1}
         />
@@ -36,6 +37,7 @@ const StatementOfPurpose = () => {
           className="border border-[#8A8A8A]/40 px-4 py-1 placeholder:text-[#C3C3C3] text-base text-[#595959] h-[68px] outline-none rounded-md"
           onChange={handleChange}
           name="sop_2"
+          maxLength={300}
           value={sop_2}
         />
         <p className="text-[10px] text-[#8A8A8A] text-end">300 word limit</p>
@@ -49,6 +51,7 @@ const StatementOfPurpose = () => {
           className="border border-[#8A8A8A]/40 px-4 py-1 placeholder:text-[#C3C3C3] text-base text-[#595959] h-[68px] outline-none rounded-md"
           onChange={handleChange}
           name="sop_3"
+          maxLength={300}
           value={sop_3}
         />
         <p className="text-[10px] text-[#8A8A8A] text-end">300 word limit</p>
